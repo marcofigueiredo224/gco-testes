@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0 (Python 3.10.4 on win32)" generated="2024-09-09T11:15:04.325821" rpa="false" schemaversion="5">
+<suite id="s1" name="4-Login" source="d:\testes-gco\testes-gco\Institucional\4-login.robot">
+<test id="s1-t1" name="Login - Campo senha obrigatório" line="42">
+<kw name="Dado que estou no institucional" owner="browser-setup">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-09-09T11:15:04.518301" level="INFO">Opening browser 'chrome' to base url 'https://rt7:00%40rt7%4000@gcro-47-feature.devops.grancursosonline.com.br'.</msg>
+<arg>${URL-inicial-branch}</arg>
+<arg>browser=${BROWSER}</arg>
+<arg>options=${OPTIONS}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-09-09T11:15:04.518301" elapsed="6.115462"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-09-09T11:15:10.634763" elapsed="0.028026"/>
+</kw>
+<status status="PASS" start="2024-09-09T11:15:04.518301" elapsed="6.144488"/>
+</kw>
+<kw name="Quando clico no botão &quot;Entrar&quot;" owner="config_cabeçalho">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${botao-entrar}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-09-09T11:15:10.664792" elapsed="0.067060"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-09-09T11:15:10.732852" level="INFO">Clicking element 'css=#container-assinatura-topo &gt; div &gt; a &gt; span.d-none.d-sm-inline-block.semibold'.</msg>
+<arg>${botao-entrar}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-09T11:15:10.731852" elapsed="0.049044"/>
+</kw>
+<status status="PASS" start="2024-09-09T11:15:10.663790" elapsed="0.117106"/>
+</kw>
+<kw name="E preencho o E-mail" owner="config_login">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${campo-email-login}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-09-09T11:15:10.781897" elapsed="2.116923"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-09-09T11:15:12.899821" level="INFO">Typing text 'robot.automacaogran@gmail.com' into text field 'css=#login-email-site'.</msg>
+<arg>${campo-email-login}</arg>
+<arg>${input-email}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-09T11:15:12.899821" elapsed="0.149134"/>
+</kw>
+<status status="PASS" start="2024-09-09T11:15:10.781897" elapsed="2.267058"/>
+</kw>
+<kw name="E clico em &quot;Entrar&quot;" owner="config_login">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-09-09T11:15:13.050957" level="INFO">Clicking element 'css=#login-entrar-site'.</msg>
+<arg>${botao-entrar-login}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-09T11:15:13.049957" elapsed="0.111101"/>
+</kw>
+<status status="PASS" start="2024-09-09T11:15:13.049957" elapsed="0.112102"/>
+</kw>
+<kw name="Então um mensagem de &quot;Ocorreu um erro ao submeter o formulário!&quot; deverá ser exibida" owner="config_login">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<msg time="2024-09-09T11:15:19.703783" level="INFO">Suppressing StaleElementReferenceException from Selenium.</msg>
+<msg time="2024-09-09T11:16:19.957995" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Message: timeout: Timed out receiving message from renderer: 10.000
+  (Session info: chrome=128.0.6613.120)
+Stacktrace:
+	GetHandleVerifier [0x00007FF72F55B5D2+29090]
+	(No symbol) [0x00007FF72F4CE689]
+	(No symbol) [0x00007FF72F38B1CA]
+	(No symbol) [0x00007FF72F373F0D]
+	(No symbol) [0x00007FF72F373C10]
+	(No symbol) [0x00007FF72F371AD3]
+	(No symbol) [0x00007FF72F37231F]
+	(No symbol) [0x00007FF72F399B30]
+	(No symbol) [0x00007FF72F435B30]
+	(No symbol) [0x00007FF72F4066EA]
+	(No symbol) [0x00007FF72F4265D9]
+	(No symbol) [0x00007FF72F406493]
+	(No symbol) [0x00007FF72F3D09B1]
+	(No symbol) [0x00007FF72F3D1B11]
+	GetHandleVerifier [0x00007FF72F878C5D+3295277]
+	GetHandleVerifier [0x00007FF72F8C4843+3605523]
+	GetHandleVerifier [0x00007FF72F8BA707+3564247]
+	GetHandleVerifier [0x00007FF72F616EB6+797318]
+	(No symbol) [0x00007FF72F4D980F]
+	(No symbol) [0x00007FF72F4D53F4]
+	(No symbol) [0x00007FF72F4D5580]
+	(No symbol) [0x00007FF72F4C4A1F]
+	BaseThreadInitThunk [0x00007FFB3C457374+20]
+	RtlUserThreadStart [0x00007FFB3D5BCC91+33]
+</msg>
+<msg time="2024-09-09T11:16:19.961501" level="FAIL">Message: stale element reference: stale element not found
+  (Session info: chrome=128.0.6613.120); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#stale-element-reference-exception
+Stacktrace:
+	GetHandleVerifier [0x00007FF72F55B5D2+29090]
+	(No symbol) [0x00007FF72F4CE689]
+	(No symbol) [0x00007FF72F38B1CA]
+	(No symbol) [0x00007FF72F39DBD9]
+	(No symbol) [0x00007FF72F392944]
+	(No symbol) [0x00007FF72F392AC9]
+	(No symbol) [0x00007FF72F390777]
+	(No symbol) [0x00007FF72F394398]
+	(No symbol) [0x00007FF72F42775C]
+	(No symbol) [0x00007FF72F4066EA]
+	(No symbol) [0x00007FF72F4265D9]
+	(No symbol) [0x00007FF72F406493]
+	(No symbol) [0x00007FF72F3D09B1]
+	(No symbol) [0x00007FF72F3D1B11]
+	GetHandleVerifier [0x00007FF72F878C5D+3295277]
+	GetHandleVerifier [0x00007FF72F8C4843+3605523]
+	GetHandleVerifier [0x00007FF72F8BA707+3564247]
+	GetHandleVerifier [0x00007FF72F616EB6+797318]
+	(No symbol) [0x00007FF72F4D980F]
+	(No symbol) [0x00007FF72F4D53F4]
+	(No symbol) [0x00007FF72F4D5580]
+	(No symbol) [0x00007FF72F4C4A1F]
+	BaseThreadInitThunk [0x00007FFB3C457374+20]
+	RtlUserThreadStart [0x00007FFB3D5BCC91+33]
+</msg>
+<arg>${msg-campos-obrigatorios}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="FAIL" start="2024-09-09T11:15:13.163060" elapsed="66.801132">Message: stale element reference: stale element not found
+  (Session info: chrome=128.0.6613.120); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#stale-element-reference-exception
+Stacktrace:
+	GetHandleVerifier [0x00007FF72F55B5D2+29090]
+	(No symbol) [0x00007FF72F4CE689]
+	(No symbol) [0x00007FF72F38B1CA]
+	(No symbol) [0x00007FF72F39DBD9]
+	(No symbol) [0x00007FF72F392944]
+	(No symbol) [0x00007FF72F392AC9]
+	(No symbol) [0x00007FF72F390777]
+	(No symbol) [0x00007FF72F394398]
+	(No symbol) [0x00007FF72F42775C]
+	(No symbol) [0x00007FF72F4066EA]
+	(No symbol) [0x00007FF72F4265D9]
+	(No symbol) [0x00007FF72F406493]
+	(No symbol) [0x00007FF72F3D09B1]
+	(No symbol) [0x00007FF72F3D1B11]
+	GetHandleVerifier [0x00007FF72F878C5D+3295277]
+	GetHandleVerifier [0x00007FF72F8C4843+3605523]
+	GetHandleVerifier [0x00007FF72F8BA707+3564247]
+	GetHandleVerifier [0x00007FF72F616EB6+797318]
+	(No symbol) [0x00007FF72F4D980F]
+	(No symbol) [0x00007FF72F4D53F4]
+	(No symbol) [0x00007FF72F4D5580]
+	(No symbol) [0x00007FF72F4C4A1F]
+	BaseThreadInitThunk [0x00007FFB3C457374+20]
+	RtlUserThreadStart [0x00007FFB3D5BCC91+33]
+</status>
+</kw>
+<status status="FAIL" start="2024-09-09T11:15:13.163060" elapsed="66.801132">Message: stale element reference: stale element not found
+  (Session info: chrome=128.0.6613.120); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#stale-element-reference-exception
+Stacktrace:
+	GetHandleVerifier [0x00007FF72F55B5D2+29090]
+	(No symbol) [0x00007FF72F4CE689]
+	(No symbol) [0x00007FF72F38B1CA]
+	(No symbol) [0x00007FF72F39DBD9]
+	(No symbol) [0x00007FF72F392944]
+	(No symbol) [0x00007FF72F392AC9]
+	(No symbol) [0x00007FF72F390777]
+	(No symbol) [0x00007FF72F394398]
+	(No symbol) [0x00007FF72F42775C]
+	(No symbol) [0x00007FF72F4066EA]
+	(No symbol) [0x00007FF72F4265D9]
+	(No symbol) [0x00007FF72F406493]
+	(No symbol) [0x00007FF72F3D09B1]
+	(No symbol) [0x00007FF72F3D1B11]
+	GetHandleVerifier [0x00007FF72F878C5D+3295277]
+	GetHandleVerifier [0x00007FF72F8C4843+3605523]
+	GetHandleVerifier [0x00007FF72F8BA707+3564247]
+	GetHandleVerifier [0x00007FF72F616EB6+797318]
+	(No symbol) [0x00007FF72F4D980F]
+	(No symbol) [0x00007FF72F4D53F4]
+	(No symbol) [0x00007FF72F4D5580]
+	(No symbol) [0x00007FF72F4C4A1F]
+	BaseThreadInitThunk [0x00007FFB3C457374+20]
+	RtlUserThreadStart [0x00007FFB3D5BCC91+33]
+</status>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-09-09T11:16:19.965010" elapsed="2.150963"/>
+</kw>
+<status status="FAIL" start="2024-09-09T11:15:04.518301" elapsed="77.597672">Message: stale element reference: stale element not found
+  (Session info: chrome=128.0.6613.120); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#stale-element-reference-exception
+Stacktrace:
+	GetHandleVerifier [0x00007FF72F55B5D2+29090]
+	(No symbol) [0x00007FF72F4CE689]
+	(No symbol) [0x00007FF72F38B1CA]
+	(No symbol) [0x00007FF72F39DBD9]
+	(No symbol) [0x00007FF72F392944]
+	(No symbol) [0x00007FF72F392AC9]
+	(No symbol) [0x00007FF72F390777]
+	(No symbol) [0x00007FF72F394398]
+	(No symbol) [0x00007FF72F42775C]
+	(No symbol) [0x00007FF72F4066EA]
+	(No symbol) [0x00007FF72F4265D9]
+	(No symbol) [0x00007FF72F406493]
+	(No symbol) [0x00007FF72F3D09B1]
+	(No symbol) [0x00007FF72F3D1B11]
+	GetHandleVerifier [0x00007FF72F878C5D+3295277]
+	GetHandleVerifier [0x00007FF72F8C4843+3605523]
+	GetHandleVerifier [0x00007FF72F8BA707+3564247]
+	GetHandleVerifier [0x00007FF72F616EB6+797318]
+	(No symbol) [0x00007FF72F4D980F]
+	(No symbol) [0x00007FF72F4D53F4]
+	(No symbol) [0x00007FF72F4D5580]
+	(No symbol) [0x00007FF72F4C4A1F]
+	BaseThreadInitThunk [0x00007FFB3C457374+20]
+	RtlUserThreadStart [0x00007FFB3D5BCC91+33]
+</status>
+</test>
+<status status="FAIL" start="2024-09-09T11:15:04.330826" elapsed="77.788150"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="4-Login">4-Login</stat>
+</suite>
+</statistics>
+<errors>
+<msg time="2024-09-09T11:16:19.957995" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Message: timeout: Timed out receiving message from renderer: 10.000
+  (Session info: chrome=128.0.6613.120)
+Stacktrace:
+	GetHandleVerifier [0x00007FF72F55B5D2+29090]
+	(No symbol) [0x00007FF72F4CE689]
+	(No symbol) [0x00007FF72F38B1CA]
+	(No symbol) [0x00007FF72F373F0D]
+	(No symbol) [0x00007FF72F373C10]
+	(No symbol) [0x00007FF72F371AD3]
+	(No symbol) [0x00007FF72F37231F]
+	(No symbol) [0x00007FF72F399B30]
+	(No symbol) [0x00007FF72F435B30]
+	(No symbol) [0x00007FF72F4066EA]
+	(No symbol) [0x00007FF72F4265D9]
+	(No symbol) [0x00007FF72F406493]
+	(No symbol) [0x00007FF72F3D09B1]
+	(No symbol) [0x00007FF72F3D1B11]
+	GetHandleVerifier [0x00007FF72F878C5D+3295277]
+	GetHandleVerifier [0x00007FF72F8C4843+3605523]
+	GetHandleVerifier [0x00007FF72F8BA707+3564247]
+	GetHandleVerifier [0x00007FF72F616EB6+797318]
+	(No symbol) [0x00007FF72F4D980F]
+	(No symbol) [0x00007FF72F4D53F4]
+	(No symbol) [0x00007FF72F4D5580]
+	(No symbol) [0x00007FF72F4C4A1F]
+	BaseThreadInitThunk [0x00007FFB3C457374+20]
+	RtlUserThreadStart [0x00007FFB3D5BCC91+33]
+</msg>
+</errors>
+</robot>

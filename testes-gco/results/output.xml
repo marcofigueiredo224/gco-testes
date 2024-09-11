@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0.1 (Python 3.12.5 on win32)" generated="2024-09-06T16:56:40.259063" rpa="false" schemaversion="5">
+<suite id="s1" name="Testes-Gco" source="C:\Users\KarinaRobertadosSant\testes-gco">
+<suite id="s1-s1" name="Institucional" source="C:\Users\KarinaRobertadosSant\testes-gco\Institucional">
+<suite id="s1-s1-s1" name="1-Home-Cabeçalho" source="C:\Users\KarinaRobertadosSant\testes-gco\Institucional\1-home-cabeçalho.robot">
+<test id="s1-s1-s1-t1" name="Pesquisa por cursos" line="10">
+<kw name="Dado que estou no institucional" owner="browser-setup">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-09-06T16:56:41.237757" level="INFO">Opening browser 'chrome' to base url 'https://rt7:00%40rt7%4000@gcro-47-feature.devops.grancursosonline.com.br'.</msg>
+<arg>${URL}</arg>
+<arg>browser=${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-09-06T16:56:41.236755" elapsed="36.249525"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-09-06T16:57:17.486280" elapsed="0.072138"/>
+</kw>
+<status status="PASS" start="2024-09-06T16:56:41.234754" elapsed="36.323664"/>
+</kw>
+<kw name="Quando digito um curso na barra de pesquisa" owner="config_cabeçalho">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${campo-pesquisa}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-09-06T16:57:17.560333" elapsed="0.100286"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-09-06T16:57:17.660619" level="INFO">Typing text '"Enfermagem"' into text field 'name=q'.</msg>
+<arg>${campo-pesquisa}</arg>
+<arg>"Enfermagem"</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-06T16:57:17.660619" elapsed="0.186426"/>
+</kw>
+<status status="PASS" start="2024-09-06T16:57:17.558418" elapsed="0.288627"/>
+</kw>
+<kw name="E aperto &quot;Enter&quot;" owner="config_cabeçalho">
+<kw name="Press Keys" owner="SeleniumLibrary">
+<msg time="2024-09-06T16:57:17.847045" level="INFO">Sending key(s) ('ENTER',) to name=q element.</msg>
+<msg time="2024-09-06T16:57:18.140124" level="INFO">Pressing special key ENTER to element.</msg>
+<msg time="2024-09-06T16:57:18.140124" level="INFO">Releasing special key ENTER.</msg>
+<arg>${campo-pesquisa}</arg>
+<arg>ENTER</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<status status="PASS" start="2024-09-06T16:57:17.847045" elapsed="6.733422"/>
+</kw>
+<status status="PASS" start="2024-09-06T16:57:17.847045" elapsed="6.733422"/>
+</kw>
+<kw name="Entao devo ser redirecionado para a pagina com os resultos esperados" owner="config_cabeçalho">
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2024-09-06T16:57:24.606852" level="INFO">Element 'css=#pagina-carreiras &gt; section &gt; div.container &gt; div &gt; div &gt; div &gt; div &gt; div &gt; div &gt; h1' is displayed.</msg>
+<arg>${resultado-busca}</arg>
+<arg>"Enfermagem"</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2024-09-06T16:57:24.580467" elapsed="0.026385"/>
+</kw>
+<status status="PASS" start="2024-09-06T16:57:24.580467" elapsed="0.026385"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-09-06T16:57:24.607859" elapsed="2.258619"/>
+</kw>
+<status status="PASS" start="2024-09-06T16:56:41.233753" elapsed="45.632725"/>
+</test>
+<status status="PASS" start="2024-09-06T16:56:40.316061" elapsed="46.550417"/>
+</suite>
+<status status="PASS" start="2024-09-06T16:56:40.313061" elapsed="46.556924"/>
+</suite>
+<status status="PASS" start="2024-09-06T16:56:40.266096" elapsed="46.603889"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Testes-Gco">Testes-Gco</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1" name="Institucional">Testes-Gco.Institucional</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1-s1" name="1-Home-Cabeçalho">Testes-Gco.Institucional.1-Home-Cabeçalho</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
