@@ -52,7 +52,7 @@ E preencho os campos E-mail com um formato inválido
 
 #---------------------------------------------------------------------------------------------------------------------
 Então uma mensagem de "Este campo deve ser um email válido."
-    Wait Until Element Is Visible    ${msg-email-invalido}
+    Wait Until Element Is Visible    ${msg-email-invalido}    timeout=10s
 
 #---------------------------------------------------------------------------------------------------------------------
 E preencho o E-mail
@@ -85,7 +85,7 @@ E Preencho a senha
 Então um mensagem de "Ocorreu um erro ao submeter o formulário!" deverá ser exibida
     # Espera a mensagem de alerta estar viísvel
     Wait Until Element Is Visible    ${msg-campos-obrigatorios}
-    #Element Should Be Visible       ${msg-campos-obrigatorios}            O dado informado no(s) campo(s) em vermelho está incorreto.
+    Element Should Be Visible       ${msg-campos-obrigatorios}            O dado informado no(s) campo(s) em vermelho está incorreto.
 
 #--------------------------------------------------------------------------------------------------------------------------------------------------
 Quando o usuário informe o "E-mail" - CA
@@ -111,11 +111,11 @@ E o usuário acione o botão "Entrar"
 #---------------------------------------------------------------------------------------------------------------------------------
 Então o sistema redireciona o aluno logado para o modal de checkout de assinatura ilimitada.
     # Espera o modal de pagamento estar visível
-    Wait Until Element Is Visible    ${modal-pagamento}     timeout=7s    
+    Wait Until Element Is Visible    ${modal-pagamento}     timeout=10s    
 #-----------------------------------------------------------------------------------------------------------------------------------
 Então o sistema redireciona o aluno logado para página de checkout
     # Espera o modal de pagamento estar visivel
-    Wait Until Element Is Visible    ${titulo-checkout}    timeout=10s
+    Wait Until Element Is Visible    ${titulo-checkout}    timeout=15s
 #----------------------------------------------------------------------------------------------------------------------------------
 E o usuário acione o botão "Entrar e Finalizar compra"
     # Clica em entrar

@@ -1,7 +1,7 @@
 *** Settings ***
 Library    SeleniumLibrary
-Resource    pages/config_cabeçalho.robot
-Resource    ../shared/browser-setup.robot
+Resource    ../../pages/config_cabeçalho.robot
+Resource    ../../shared/browser-setup.robot
 Task Teardown    Close Browser
 
 
